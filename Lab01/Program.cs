@@ -1,4 +1,6 @@
-﻿string myName = "Александр Дегтярев";
+﻿using System.ComponentModel.Design.Serialization;
+
+string myName = "Александр Дегтярев";
 string groupName = "РУПО-265";
 int courseNumber = 2;
 double averageGrade = 4.6;
@@ -76,3 +78,14 @@ double priceWithVat = productPrice * (1 + VatRate);
 
 Console.WriteLine($"Учебное заведение: {CollegeName}");
 Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
+
+int scholarship = 1500;
+int monthlyExpenses = 1375;
+
+const int MonthsInSemester = 4;
+
+int moneyLeftPerMonth = scholarship - monthlyExpenses;
+Console.WriteLine("Остаток за месяц: " + moneyLeftPerMonth);
+
+int moneyLeftPerSemester = moneyLeftPerMonth * MonthsInSemester;
+Console.WriteLine("Остаток за семестр: " + moneyLeftPerSemester);
