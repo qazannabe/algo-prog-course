@@ -89,3 +89,15 @@ Console.WriteLine("Остаток за месяц: " + moneyLeftPerMonth);
 
 int moneyLeftPerSemester = moneyLeftPerMonth * MonthsInSemester;
 Console.WriteLine("Остаток за семестр: " + moneyLeftPerSemester);
+
+static void Main(string[] args)
+{
+   
+    int totalMinutes = 500;
+    int minutesPerLesson = 45;
+
+    int fullLessons = totalMinutes / minutesPerLesson;
+    int leftoverMinutes = totalMinutes % minutesPerLesson;
+
+    Console.WriteLine($"{totalMinutes} минут = {fullLessons} полных занятий + {leftoverMinutes} минут.");
+}
