@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Design.Serialization;
+﻿using System;
 
 string myName = "Александр Дегтярев";
 string groupName = "РУПО-265";
@@ -36,7 +36,7 @@ double interestRate = 0.08;
 double totalWithInterest = laptopPrice * (1 + interestRate);
 double monthlyPayment = totalWithInterest / monthsCount;
 
-Console.WriteLine ($"Цена ноутбука: {laptopPrice} руб.");
+Console.WriteLine($"Цена ноутбука: {laptopPrice} руб.");
 Console.WriteLine($"Итог с процентами: {totalWithInterest} руб.");
 Console.WriteLine($"Платеж в месяц: {monthlyPayment} руб.");
 
@@ -60,7 +60,7 @@ string lastName = "Смирнова";
 // Способ 1: конкатенация через оператор +
 string fullNameConcat = firstName + " " + lastName;
 
-// Способ 2: интерполяция через $""
+// Способ 2: интерполяция через $"" 
 string fullNameInterp = $"{firstName} {lastName}";
 
 // Вывод результатов
@@ -90,14 +90,13 @@ Console.WriteLine("Остаток за месяц: " + moneyLeftPerMonth);
 int moneyLeftPerSemester = moneyLeftPerMonth * MonthsInSemester;
 Console.WriteLine("Остаток за семестр: " + moneyLeftPerSemester);
 
-static void Main(string[] args)
-{
-   
-    int totalMinutes = 500;
-    int minutesPerLesson = 45;
+Console.WriteLine();
+Console.WriteLine("Деление с остатком");
 
-    int fullLessons = totalMinutes / minutesPerLesson;
-    int leftoverMinutes = totalMinutes % minutesPerLesson;
+int totalMinutes = 500;
+int minutesPerLesson = 45;
 
-    Console.WriteLine($"{totalMinutes} минут = {fullLessons} полных занятий + {leftoverMinutes} минут.");
-}
+int fullLessons = totalMinutes / minutesPerLesson;
+int leftoverMinutes = totalMinutes % minutesPerLesson;
+
+Console.WriteLine($"{totalMinutes} минут = {fullLessons} полных занятий + {leftoverMinutes} минут.");
